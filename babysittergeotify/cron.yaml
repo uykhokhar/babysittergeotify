@@ -1,0 +1,12 @@
+# cron.yaml
+#
+# To test in developement server goto http://localhost:8000/cron
+#
+
+cron:
+- description: daily cost summary and notification
+  url: /tasks/costoftheday/
+  schedule: every day 22:00
+  retry_parameters:
+    min_backoff_seconds: 60
+    max_doublings: 5
